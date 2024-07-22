@@ -56,6 +56,7 @@ button:focus-visible {
 
 .card {
   padding: 2em;
+  border: 1px solid #42b983; /* Verde Vue.js */
 }
 
 #app {
@@ -63,17 +64,24 @@ button:focus-visible {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  color: #35495e; /* Oscuro Vue.js */
+  background-color: #42b983a9; /* Verde Vue.js */
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #35495e; /* Oscuro Vue.js */
+    background-color: #42b9836c; /* Verde Vue.js */
   }
   a:hover {
-    color: #747bff;
+    color: #35495e; /* Oscuro Vue.js */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #3f76be; /* Verde Vue.js */
+    color: #ffffff; /* Para mejorar el contraste */
+    border: none;
+  }
+  button:hover {
+    background-color: #33a583; /* Un verde un poco más oscuro para el hover */
   }
 }
