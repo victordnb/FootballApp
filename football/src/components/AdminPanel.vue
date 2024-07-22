@@ -32,17 +32,37 @@
           <button type="submit">Crear Evento</button>
         </form>
       </section>
+
+      <!-- Sección para listar usuarios -->
+    <section>
+      <h3>Listado de Usuarios</h3>
+      <DataTable :value="usersData" :loading="isLoading">
+
+        <Column field="firstName" header="Nombre"></Column>
+        <Column field="lastName" header="Apellidos"></Column>
+        <Column field="position" header="Posición"></Column>
+        <Column field="phoneNumber" header="Teléfono"></Column>
+        <Column field="cardNumber" header="Número de ficha"></Column>
+
+        <!-- Agrega más columnas según sea necesario -->
+      </DataTable>
+    </section>
   
       <!-- Más secciones para otras funcionalidades como subir entrenamientos -->
     </div>
   </template>
   
   <script setup lang="ts">
-  import { ref } from 'vue';
+  import { onMounted, ref } from 'vue';
   import useUsers from '@/composables/useUsers';
+  import DataTable from 'primevue/datatable';
+  import Column from 'primevue/column'
+  import { User } from '@/interfaces/user';
 
   const { users, isLoading, error, fetchUsers, createUser: createNewUser, updateUser, deleteUser } = useUsers();
   
+  const usersData = ref([]);
+
   const newUser = ref({
   username: '',
   password: '',
@@ -92,6 +112,15 @@
     // Lógica para crear un evento
     console.log('Crear evento:', newEvent.value);
   }
+
+  onMounted(async () => {
+  const data: User[] | any = await fetchUsers();
+  if(data) {
+    usersData.value = data;
+    console.log('Usuarios:', usersData.value);
+  }
+ 
+});
   
   // Agrega funciones similares para editar usuarios, subir entrenamientos, etc.
   </script>
