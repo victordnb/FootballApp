@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Vue 3
+dist/
+public/
+
+# Archivos específicos
+Captura.JPG
+
+# Sistema de archivos
+.DS_Store
+Thumbs.db
