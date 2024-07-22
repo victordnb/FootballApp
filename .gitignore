@@ -13,3 +13,6 @@ Captura.JPG
 # Sistema de archivos
 .DS_Store
 Thumbs.db
+
+# Archivo de variables de entorno
+.env
