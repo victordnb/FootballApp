@@ -84,4 +84,63 @@ button:focus-visible {
   button:hover {
     background-color: #33a583; /* Un verde un poco más oscuro para el hover */
   }
+
+  .datatable-container-colorback{
+    background-color: #fff;
+  }
+
+  .datatable-container {
+    background-color: #42b9836c;
+    display: flex;
+    justify-content: center; /* Centra la tabla horizontalmente */
+    align-items: center; /* Centra la tabla verticalmente si es necesario */
+    width: auto;
+    /* Agregar grid a la tabla de primevue */
+    }
+   
+    /* Estilos para las celdas de la tabla */
+    .p-datatable .p-datatable-tbody td {
+      width: auto;
+      text-align: center;
+      width: auto;
+    }
+  
+    /* Estilos para los encabezados de la tabla */
+    .p-datatable .p-datatable-thead th {
+      width: auto;
+      text-align: center;
+    }
+  
+    /* Estilos para los botones de la tabla */
+    .p-datatable .p-datatable-tfoot td {
+      width: auto;
+      text-align: center;
+    }
+  
+    /*Borde de las celdas */
+    .p-datatable .p-datatable-tbody td, .p-datatable .p-datatable-thead th {
+      border: 1px solid #ddd;
+    }
+  
+    /*Color de fondo de las celdas */
+    .p-datatable .p-datatable-tbody td {
+      background-color: #42b98333;
+    }
+  
+    /*Color de fondo de los encabezados */
+    .p-datatable .p-datatable-thead th {
+      background-color: #f0f0f0;
+    }
+  
+    /*Color de fondo de los botones */
+    .p-datatable .p-datatable-tfoot td {
+      background-color: #f0f0f0;
+    }
+  
+    /*Color de fondo de la tabla */
+    .p-datatable {
+      background-color: #42b9836c;
+    }
+
+
 }

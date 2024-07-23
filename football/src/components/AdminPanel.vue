@@ -34,19 +34,21 @@
       </section>
 
       <!-- Sección para listar usuarios -->
-    <section>
-      <h3>Listado de Usuarios</h3>
-      <DataTable :value="usersData" :loading="isLoading">
-
-        <Column field="firstName" header="Nombre"></Column>
-        <Column field="lastName" header="Apellidos"></Column>
-        <Column field="position" header="Posición"></Column>
-        <Column field="phoneNumber" header="Teléfono"></Column>
-        <Column field="cardNumber" header="Número de ficha"></Column>
-
-        <!-- Agrega más columnas según sea necesario -->
-      </DataTable>
-    </section>
+      <section>
+  <h3>Listado de Usuarios</h3>
+  <div class="datatable-container-colorback">
+  <div class="datatable-container">
+    <DataTable :value="usersData" :loading="isLoading">
+      <Column field="firstName" header="Nombre"></Column>
+      <Column field="lastName" header="Apellidos"></Column>
+      <Column field="position" header="Posición"></Column>
+      <Column field="phoneNumber" header="Teléfono"></Column>
+      <Column field="cardNumber" header="Número de ficha"></Column>
+      <!-- Agrega más columnas según sea necesario -->
+    </DataTable>
+  </div>
+</div>
+</section>
   
       <!-- Más secciones para otras funcionalidades como subir entrenamientos -->
     </div>
@@ -127,5 +129,6 @@
   
   <style scoped>
   /* Estilos para tu panel de administración */
+  
   
   </style>

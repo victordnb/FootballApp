@@ -2,7 +2,7 @@ import { ref } from 'vue';
 import { userService } from '../api/apiService'; // Asegúrate de que la ruta sea correcta
 import { NewUser, User } from '../interfaces/user'; // Importa las interfaces necesarias
 
-function useUsers() {
+function useUsers(data?: any) {
   const users = ref([] as User[]);
   const isLoading = ref(false);
   const error = ref(null);
